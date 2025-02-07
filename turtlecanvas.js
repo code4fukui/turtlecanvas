@@ -59,7 +59,6 @@ const cy = y => y / 1000 * canvas.height;
 const move = (x, y) => {
   g.bkx = cx(x);
   g.bky = cy(y);
-  g.bkth = 0; // degree
 };
 export const forward = (u) => {
   u = cx(u);
@@ -101,6 +100,9 @@ export const light = (l) => { // 0-100
   g.bkl = l;
   g.strokeStyle = `hsl(${g.bkh} ${g.bks} ${g.bkl})`
 };
+g.bkx = 0;
+g.bky = 0;
+g.bkth = -90;
 g.bkh = 0;
 g.bks = 50;
 g.bkl = 50;
