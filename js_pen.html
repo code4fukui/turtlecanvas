@@ -1,0 +1,18 @@
+<!DOCTYPE html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width"><link rel="icon" href="data:">
+<script type="module">
+import { forward, hue, rotate, sleep, penUp, penDown } from "./turtlecanvas.js";
+
+for (let i = 0; i < 1000; i++) {
+  penUp();
+  forward(i / 4);
+  penDown();
+  forward(i / 4);
+  penUp();
+  forward(i / 4);
+  penDown();
+  forward(i / 4);
+  hue(i / 3)
+  await sleep(1);
+  rotate(100 + i / 100);
+}
+</script>

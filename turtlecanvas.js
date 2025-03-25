@@ -60,26 +60,37 @@ const move = (x, y) => {
   g.bkx = cx(x);
   g.bky = cy(y);
 };
+export const penUp = () => {
+  g.enablePen = false;
+};
+export const penDown = () => {
+  g.enablePen = true;
+};
 export const forward = (u) => {
   u = cx(u);
   const th = g.bkth / 180 * Math.PI;
   const x2 = g.bkx + Math.cos(th) * u;
   const y2 = g.bky + Math.sin(th) * u;
-  g.beginPath();
-  g.moveTo(g.bkx, g.bky);
-  g.lineTo(x2, y2);
-  g.stroke();
+  if (g.enablePen) {
+    g.beginPath();
+    g.moveTo(g.bkx, g.bky);
+    g.lineTo(x2, y2);
+    g.stroke();
+  }
   g.bkx = x2;
   g.bky = y2;
 };
-export const rotate = (dth) => {
+export const backward = (u) => {
+  forward(-u);
+};
+export const right = (dth = 90) => {
   g.bkth += dth;
 };
-export const right = () => {
-  rotate(90);
+export const left = (dth = 90) => {
+  right(-90);
 };
-export const left = () => {
-  rotate(-90);
+export const rotate = (dth) => { // same a right
+  right(dth);
 };
 export const clear = (color) => {
   g.fillStyle = "white";
@@ -106,4 +117,5 @@ g.bkth = -90;
 g.bkh = 0;
 g.bks = 50;
 g.bkl = 50;
+g.enablePen = true;
 move(500, 500);
