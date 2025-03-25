@@ -29,7 +29,7 @@ for i = 0 to 1000
   forward(i)
   hue(i / 3)
   sleep(1)
-  rotate(100 + i / 100)
+  right(100 + i / 100)
 next
 </script>
 ```
