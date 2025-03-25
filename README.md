@@ -6,12 +6,12 @@ a simple turtle graphics library in JavaScript
 
 |API|feature|機能|
 |-|-|-|
-|penUp()|disable draw|ペンを上げる|
-|penDown()|enable draw|ペンを下げる|
 |forward(u)|forward u/1000|u/1000だけ進む|
 |backward(u)|backward u/1000|u/1000だけ戻る|
 |right(dth = 90)|turn right dth degree|dth度、左に曲がる|
 |left(dth = 90)|turn left dth degree|dth度、左に曲がる|
+|penUp()|disable draw|ペンを上げる|
+|penDown()|enable draw|ペンを下げる|
 |clear()|clear the screen|画面を消去する|
 |sleep(n)|wait n seconds|n秒待つ|
 |hue(h)|change the pen hue degree(0-360)|ペンの色相(0-360)を変更|
