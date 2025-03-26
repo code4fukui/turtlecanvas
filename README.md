@@ -1,7 +1,7 @@
 # turtlecanvas
 
 - a simple turtle graphics library in JavaScript
-- canvas: (-1000, -1000)-(1000, 1000)
+- canvas: (0, 0)-(1000, 1000)
 - [demo applications](https://code4fukui.github.io/turtlecanvas/)
 
 ## API
