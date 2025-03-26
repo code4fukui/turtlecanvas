@@ -1,12 +1,14 @@
 <!DOCTYPE html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width"><link rel="icon" href="data:">
 <script type="module" src="https://code4fukui.github.io/Wirth/web.js"></script>
 <script type="text/wirth">
-function forward, hue, right, sleep from "./turtlecanvas.js"
+function forward, hue, right, sleep, includes, random from "./turtlecanvas.js"
 
-for i = 0 to 1000
-  forward(i)
-  hue(i / 3)
+while 1
+  forward(30)
+  if not includes()
+    hue(random(360))
+    right(180 + random(20))
+  endif
   sleep(1)
-  right(100 + i / 100)
 next
 </script>

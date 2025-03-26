@@ -1,12 +1,12 @@
 <!DOCTYPE html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width"><link rel="icon" href="data:">
 <script type="module">
-import { forward, hue, rotate, sleep, backward } from "./turtlecanvas.js";
+import { forward, hue, right, sleep, backward } from "./turtlecanvas.js";
 
 for (let i = 0; i < 1000; i++) {
   forward(i);
   backward(i / 8);
-  hue(i / 3)
+  hue(i / 3);
   await sleep(1);
-  rotate(100 + i / 100);
+  right(100 + i / 100);
 }
 </script>

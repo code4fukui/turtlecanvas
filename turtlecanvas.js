@@ -96,8 +96,11 @@ export const clear = (color) => {
   g.fillStyle = "white";
   g.fillRect(0, 0, canvas.width, canvas.height);
 };
-export const sleep = (sec) => {
-  return new Promise(resolve => setTimeout(resolve, sec / 1000));
+export const sleep = (msec) => {
+  return new Promise(resolve => setTimeout(resolve, msec));
+};
+export const random = (n) => {
+  return Math.floor(Math.random() * n);
 };
 export const hue = (h) => { // 0-360
   g.bkh = h;
@@ -110,6 +113,16 @@ export const satu = (s) => { // 0-100
 export const light = (l) => { // 0-100
   g.bkl = l;
   g.strokeStyle = `hsl(${g.bkh} ${g.bks} ${g.bkl})`
+};
+export const getX = () => g.bkx;
+export const getY = () => g.bky;
+export const getAngle = () => g.bkth;
+export const includes = (x = 0, y = 0, w = 1000, h = 1000) => {
+  x = cx(x);
+  y = cy(y);
+  const x2 = cx(x + w);
+  const y2 = cy(y + h);
+  return g.bkx >= x && g.bkx < x2 && g.bky >= y && g.bky < y2;
 };
 g.bkx = 0;
 g.bky = 0;

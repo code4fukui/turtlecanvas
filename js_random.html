@@ -1,0 +1,15 @@
+<!DOCTYPE html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width"><link rel="icon" href="data:">
+<script type="module">
+import { forward, hue, right, left, sleep, random } from "./turtlecanvas.js";
+
+for (;;) {
+  hue(random(360));
+  forward(50);
+  if (random(2)) {
+    right();
+  } else {
+    left();
+  }
+  await sleep(10);
+}
+</script>
